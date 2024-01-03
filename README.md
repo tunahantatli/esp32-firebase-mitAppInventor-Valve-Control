@@ -3,6 +3,10 @@ This is a valve control project made using ESP32, firebase and MIT App Inventor
 
 This is a valve control project made using ESP32, firebase and MIT App Inventor.
 IOXhop firebase, Ticker and WiFi libraries were used in the project.
+
+(IOXhop Firebase Lib: https://github.com/ArtronShop/IOXhop_FirebaseESP32)
+
+
 When the Open (1) command for a valve comes from the application, the valve_status value in the Realtime Database we created in firebase becomes 1 and the value of the GPIO pin we defined to open in Esp32 becomes HIGH and after remaining the same for the time we define, it becomes LOW. However, in Firebased, it continues to keep the valve_status value as 1. Thus, we see the status of the relevant valve as Open in the application.
 Likewise, when we give the Close (0) command, the valve_status value in the firebase section becomes 0. The value of the GPIO pin we define to turn it off first becomes HIGH and after a certain period of time it becomes LOW. Firebased continues to keep the valve_status value at 0. And in the application, we see the status of the relevant valve as closed.
 
